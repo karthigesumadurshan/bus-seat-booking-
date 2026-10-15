@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="12dp"
+    android:background="#FAFAFA">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Bus Seat Booking (57 Seats)"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="8dp"/>
+
+    <!-- Legend -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="8dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="🟩 Available"
+            android:textSize="12sp"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="🟨 Selected"
+            android:textSize="12sp"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="🟥 Booked"
+            android:textSize="12sp"/>
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/bus_outline_bg"
+            android:padding="12dp">
+
+            <!-- FRONT OF BUS -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="12dp">
+
+                <!-- Door -->
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:gravity="center"
+                    android:text="🚪 DOOR"
+                    android:textStyle="bold"
+                    android:textSize="12sp"
+                    android:textColor="#455A64"
+                    android:background="@drawable/driver_box_bg"
+                    android:padding="8dp"/>
+
+                <!-- Aisle -->
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_weight="1"/>
+
+                <!-- Driver -->
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:gravity="center"
+                    android:text="🧑‍✈️ DRIVER"
+                    android:textStyle="bold"
+                    android:textSize="12sp"
+                    android:textColor="#455A64"
+                    android:background="@drawable/driver_box_bg"
+                    android:padding="8dp"/>
+
+            </LinearLayout>
+
+            <!-- Seats -->
+            <LinearLayout
+                android:id="@+id/seatMapContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"/>
+
+            <!-- Back Row -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="BACK ROW"
+                android:textStyle="bold"
+                android:textSize="12sp"
+                android:textColor="#607D8B"
+                android:gravity="center"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="5dp"/>
+
+            <LinearLayout
+                android:id="@+id/backRowContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/selectionSummary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Select seats"
+        android:textSize="13sp"
+        android:layout_marginTop="8dp"/>
+
+    <Button
+        android:id="@+id/bookSeatsBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Book Selected Seats"
+        android:layout_marginTop="8dp"/>
+
+    <Button
+        android:id="@+id/viewBookingsBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="View All Bookings"
+        android:layout_marginTop="6dp"/>
+
+    <Button
+        android:id="@+id/resetBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Reset All Seats"
+        android:layout_marginTop="6dp"/>
+
+</LinearLayout>
